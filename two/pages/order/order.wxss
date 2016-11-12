@@ -1,0 +1,13 @@
+.order{width: 94%; margin: 10px 3%; }
+.ordertwo{border-radius: 5px; border:1px solid #ddd; background: #fff; overflow: hidden; margin-bottom: 10px; }
+.h2{border-bottom: 1px solid #ddd; line-height: 45px; font-weight: normal; padding: 0 10px; overflow: hidden;}
+.i{height: 20px; width: 2px; background: #ff2c4c; float: left; display: block; margin-top: 12px;}
+.span{float: left; margin-left: 10px; font-size: 16px;}
+.em{color: #999; float: right; font-size: 1rem; font-style: normal; margin-right: 8px;}
+.b{ color: #ff2c4c; float: right; margin-right: 5px;  font-weight: normal; font-size: 16px;}
+.p{line-height: 45px; font-weight: normal; padding: 0 10px; overflow: hidden;}
+.p image{ float: left; margin-top: 8px; width: 23px;}
+.p text{float: left; border-bottom: 1px solid #ddd; margin-left: 15px; width: 85%;}
+.h3{ font-weight: normal; padding: 10px; overflow: hidden;}
+.h3span{color: #ff2c4c;  float: left; line-height: 35px;  font-size: 16px;}
+.h3a{ float: right; border: 1px solid #ddd; line-height: 35px; border-radius: 5px; padding: 0 15px; margin-right: 5px;  display: inline-block;}
