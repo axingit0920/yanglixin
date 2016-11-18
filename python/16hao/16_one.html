@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //公共样式
+        function $(id){
+            return document.getElementById(id);
+        }
+        //验证姓名
+        function user_name(){
+            var name = $('username').value;
+            if(name==''){
+                $('s_name').innerHTML="<font color=red>姓名不能为空</font>";
+                return false;
+            }else{
+                $('s_name').innerHTML="";
+                var reg = /^[0-9A-Z]{5,9}$/;
+                if(reg.test(name)){
+                    $('s_name').innerHTML="";
+                    return true;
+                }else{
+                    $('s_name').innerHTML="<font color=blue>必须由5到10位数字或者字母组成，不允许数字开头</font>";
+                }
+                return true;
+            }
+        }
+        function user_pwd(){
+            var name = $('userpwd').value;
+            if(name==''){
+                $('s_pwd').innerHTML="<font color=red>密码不能为空</font>";
+                return false;
+            }else{
+                $('s_pwd').innerHTML="";
+                var reg = /^\w{6,}$/;
+                if(reg.test(name)){
+                    $('s_pwd').innerHTML="";
+                    return true;
+                }else{
+                    $('s_pwd').innerHTML="<font color=blue>密码必须在6位以上</font>";
+                }
+                return true;
+            }
+        }
+        function user_tpwd(){
+            var name1 = $('userpwd').value;
+            var name2 = $('usertpwd').value;
+            if(name2==''){
+                $('s_tpwd').innerHTML="<font color=red>确认密码不能为空</font>";
+                return false;
+            }else{
+                $('s_tpwd').innerHTML="";
+                if(name1==name2){
+                    $('s_tpwd').innerHTML="";
+                    return true;
+                }else{
+                    $('s_tpwd').innerHTML="<font color=blue>确认密码和密码必须一致</font>";
+                }
+                return true;
+            }
+        }
+        function user_email(){
+            var name = $('useremail').value;
+            if(name==''){
+                $('s_email').innerHTML="<font color=red>邮箱不能为空</font>";
+                return false;
+            }else{
+                $('s_email').innerHTML="";
+               //var reg = /^\w+@\w+\.(.com|.cn|.net)$/;
+                if(reg.test(name)){
+                    $('s_email').innerHTML="";
+                    return true;
+                }else{
+                    $('s_email').innerHTML="<font color=blue>必须包含@符号.com或者.cn或者.net结尾</font>";
+                }
+                return true;
+            }
+        }
+        function user_cell(){
+            var name = $('usercell').value;
+            if(name==''){
+                $('s_cell').innerHTML="<font color=red>手机号不能为空</font>";
+                return false;
+            }else{
+                $('s_cell').innerHTML="";
+                var reg = /^1[538][0-9]{9}$/;
+                if(reg.test(name)){
+                    $('s_cell').innerHTML="";
+                    return true;
+                }else{
+                    $('s_cell').innerHTML="<font color=blue>必须是11位数字组成，以15,18,13开头</font>";
+                }
+                return true;
+            }
+        }
+        function user_phone(){
+            var name = $('userphone').value;
+            if(name==''){
+                $('s_phone').innerHTML="<font color=red>座机号不能为空</font>";
+                return false;
+            }else{
+                $('s_phone').innerHTML="";
+                var reg = /^\d{3}-\d{8}$/;
+                if(reg.test(name)){
+                    $('s_phone').innerHTML="";
+                    return true;
+                }else{
+                    $('s_phone').innerHTML="<font color=blue>必须是010-68801717，前面是三位的区号，后面8位的电话号，中间是-</font>";
+                }
+                return true;
+            }
+        }
+        function user_id(){
+            var name = $('userid').value;
+            if(name==''){
+                $('s_id').innerHTML="<font color=red>身份证号不能为空</font>";
+                return false;
+            }else{
+                $('s_id').innerHTML="";
+                var reg1 = /^\d{13}$/;
+                if(reg1.test(name)){
+                    $('s_id').innerHTML="";
+                    return true;
+                }else{
+                    $('s_id').innerHTML="<font color=blue>必须是13或者18位或数字组成，18位的最后一位可以是x</font>";
+                }
+                return true;
+            }
+        }
+        function user_qq(){
+            var name = $('userqq').value;
+            if(name==''){
+                $('s_qq').innerHTML="<font color=red>qq号不能为空</font>";
+                return false;
+            }else{
+                $('s_qq').innerHTML="";
+                var reg = /^\d{8,11}$/;
+                if(reg.test(name)){
+                    $('s_qq').innerHTML="";
+                    return true;
+                }else{
+                    $('s_qq').innerHTML="<font color=blue>必须是8到11位数字组成</font>";
+                }
+                return true;
+            }
+        }
+    </script>
+    <center>
+        <h2>注册个人信息</h2>
+        <form action="16_one_show.py" onsubmit="return sub()" method="get">
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" id="username" name="username" onblur="user_name()" /><span id="s_name"></span></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" id="userpwd" name="userpwd" onblur="user_pwd()" /><span id="s_pwd"></span></td>
+            </tr>
+            <tr>
+                <td>手机号：</td>
+                <td><input type="text" id="usercell" name="usercell" onblur="user_cell()" /><span id="s_cell"></span></td>
+            </tr>
+            <tr>
+                <td>座机号：</td>
+                <td><input type="text" id="userphone" name="userphone" onblur="user_phone()" /><span id="s_phone"></span></td>
+            </tr>
+            <tr>
+                <td>身份证号：</td>
+                <td><input type="text" id="userid" name="userid" onblur="user_id()" /><span id="s_id"></span></td>
+            </tr>
+            <tr>
+                <td>qq号：</td>
+                <td><input type="text" id="userqq" name="userqq" onblur="user_qq()" /><span id="s_qq"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2" align=center>
+                    <input type="submit" value="注册" />
+                    <input type="reset" value="重置" />
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function sub(){
+            var name =document.getElementsByName('sex');
+            var num = 0;
+            for(var i=0;i<name.length;i++){
+                if(name[i]==true){
+                    num = num+1;
+                }
+            }
+            if(user_name()&user_pwd()&user_cell()&user_phone()&user_id()&user_qq()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html> 

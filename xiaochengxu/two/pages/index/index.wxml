@@ -1,0 +1,54 @@
+<!--​可滚动视图区域-->
+<scroll-view scroll-y="true" height="100%">
+<!--轮播图-->
+    <swiper style="height:340rpx;" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{lunbo[0]}}" wx:for-item="slide" wx:key="id">
+        <swiper-item>
+          <navigator url="{{slide.s_url}}">
+            <image class="slide-img" src="{{slide.s_url}}" mode="aspectFit"/>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--导航1-->
+      <view class="navs">
+      <block wx:for-items="{{navs2}}" wx:key="name">
+        <view class="nav-item" catchtap="catchTapCategory" data-type="{{item.name}}">
+          <image src="{{item.url}}" class="nav-image"/>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+    <!--导航2-->
+    <view class="navs">
+      <block wx:for-items="{{navs3}}" wx:key="name">
+        <view class="nav-item" catchtap="catchTapCategory" data-type="{{item.name}}">
+          <image src="{{item.url}}" class="nav-image"/>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+    <!--ad-->
+    <view class="separate">
+      <block wx:for="{{ad}}" wx:for-item="item" wx:key="id">
+        <view class="item" bindtap="bindShowProduct">
+          <image class="head-img" src="{{item.url}}" mode="aspectFill"></image>
+        </view>
+      </block>
+    </view>
+    <!--底部-->
+    <view class="brand">
+      <view class="brand-left">
+        <view class="text">
+          <text class="am-icon-user-plus"></text>
+          <text class="ziti">加盟我们</text>
+        </view>       
+      </view>
+      <view class="brand-right">
+        <view class="text">
+        <text class="am-icon-user-plus"></text>
+          <text class="ziti">意见反馈</text>
+        </view>
+      </view>     
+    </view>
+</scroll-view>

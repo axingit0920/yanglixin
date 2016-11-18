@@ -1,0 +1,42 @@
+.slide-img {
+  width: 100%;
+  height: 420rpx;
+}
+
+.navs {
+  display: flex;
+}
+
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.nav-item .nav-image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.nav-item text {
+  padding-top: 20rpx;
+  font-size: 25rpx;
+}
+
+.head-img {
+  width: 100%;
+  height:200rpx;
+}
+.brand{width: 94%; margin: 10px 3%; overflow: hidden; border-radius: 5px; border:1px solid #ddd; background: #fff;}
+.brand-left{ width: 50%; float: left; padding: 5px;}
+.brand-right{ width: 50%; float: left; border-left: 1px solid #ddd; padding: 5px;}
+.brand-left .text{ float: left; }
+.brand-right .text{ float: left;}
+.am-icon-user-plus { font-size:20px; color: #bfbab7; float: left; padding: 10px;}
+.text { font-weight: normal; font-size: 15px; color: #333;}
+.text { color: #666; font-size: 12px;}
+.text { font-weight: normal; font-size: 15px; color: #333;}
+.text { color: #666; font-size: 12px;}

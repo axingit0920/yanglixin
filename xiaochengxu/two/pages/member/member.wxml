@@ -1,0 +1,64 @@
+<view class='mine-header'>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" background-size="cover"></image>
+    <text class="userinfo-nickname">周瑞锋</text>
+  </view>
+</view>
+
+<view class="div1">
+<!--<block wx:for="{{member}}" wx:for-item="slide1" wx:key="id">-->
+  <view  class="member0">
+    <text class="member">100</text>
+    <text>余额</text>
+  </view>
+   <!--假数据模拟-->
+   <view  class="member0">
+    <text class="member">50</text>
+    <text>积分</text>
+  </view>
+  <view  class="member0">
+    <text class="member">2</text>
+    <text>优惠券</text>
+  </view>
+  <!--结束
+  </block>-->
+</view>
+
+<view class="div2">
+  <!--<block wx:for="{{navs1}}" wx:for-item="slide2" wx:key="id">-->
+  <view class="div21">
+  <image class="gongneng" src="../../images/i1.png" background-size="cover"></image>
+  <text class="ziti">钱包</text>
+  <text class="am-icon-angle-right">></text>
+  </view>
+  <!--模拟数据-->
+  <view class="div21">
+  <image class="gongneng" src="../../images/i2.png" background-size="cover"></image>
+  <text class="ziti">服务地址</text>
+  <text class="am-icon-angle-right">></text>
+  </view>
+  <!--模拟数据-->
+<!--</block>-->
+</view>
+
+<view class="div3">
+  <!--<block wx:for="{{navs2}}" wx:for-item="slide2" wx:key="id">-->
+  <view class="div31">
+  <image class="gongneng" src="../../images/i3.png" background-size="cover"></image>
+  <text class="ziti">意见反馈</text>
+  <text class="am-icon-angle-right">></text>
+  </view>
+   <!--模拟数据-->
+  <view class="div31">
+  <image class="gongneng" src="../../images/i4.png" background-size="cover"></image>
+  <text class="ziti">关于我们</text>
+  <text class="am-icon-angle-right">></text>
+  </view>
+  <view class="div31">
+  <image class="gongneng" src="../../images/i5.png" background-size="cover"></image>
+  <text class="ziti">呼叫客服</text>
+  <text class="am-icon-angle-right">></text>
+  </view>
+  <!--模拟数据-->
+<!--</block>-->
+</view>
